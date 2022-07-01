@@ -11,7 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&family=Roboto&family=Titillium+Web:wght@700&display=swap"
       rel="stylesheet"
     />
-    <title>Javid</title>
+    <!-- Pageclip sources -->
+    <link
+      rel="stylesheet"
+      href="https://s.pageclip.co/v1/pageclip.css"
+      media="screen"
+    />
+    <script
+      src="https://s.pageclip.co/v1/pageclip.js"
+      charset="utf-8"
+      defer
+    ></script>
+    <title>Javid's portfolio</title>
   </head>
   <body>
     <div class="container">
@@ -95,11 +106,32 @@
           </section>
         </main>
         <footer>
-          <section id="contact">
-            <h4 class="section-title">Contact</h4>
+          <section id="contact" class="contact-me">
+            <div class="form-title">
+              <h4 class="section-title">Contact Me</h4>
+            </div>
             <div class="details">
-              <p class="italic-text">javababayev@gmail.com</p>
-              <p class="italic-text">www.linkedin.com/in/javidanbabaev/</p>
+              <form
+                action="https://send.pageclip.co/1Dx2S9HGHKu6VcvfIs5PcGbnzCi0HwUj/contact"
+                class="pageclip-form"
+                method="post"
+              >
+                <input type="text" name="name" placeholder="Your name" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject of message"
+                />
+                <textarea name="body"></textarea>
+                <button type="submit" class="pageclip-form__submit">
+                  <span>Send</span>
+                </button>
+              </form>
             </div>
           </section>
         </footer>
