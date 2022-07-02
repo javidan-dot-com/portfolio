@@ -144,7 +144,7 @@ table {
 }
 
 .container > div {
-  margin: 80px 2vw;
+  margin: 7vw;
   height: fit-content;
   width: 600px;
   background-color: white;
@@ -157,7 +157,6 @@ table {
 }
 
 header {
-  height: 150px;
   width: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -188,28 +187,29 @@ header > .info > .info-details {
 
 header > .info > .info-details.info-details > h2 {
   letter-spacing: 0.1rem;
+  font-size: calc(0.9rem + 0.1vw);
 }
 
 header > .info > .info-details.info-details > p {
-  font-size: 13px;
+  font-size: calc(0.7rem + 0.1vw);
 }
 
 header > .info > nav {
   display: grid;
-  align-items: center;
+  align-items: flex-end;
 }
 
 nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 13px;
 }
 
 nav > ul > li {
   background-color: rgb(229, 245, 252);
   padding: 0.8vw;
   border-radius: 2px;
+  font-size: calc(0.7rem + 0.1vw);
 }
 
 nav > ul > li > a:link,
@@ -228,26 +228,29 @@ section {
 }
 
 section > h4 {
-  font-size: 16px;
+  font-size: calc(0.9rem + 0.1vw);
   text-align: center;
   letter-spacing: 0.05rem;
-  margin: 10px 0;
+  margin: 1vw 0;
 }
 
 section > .details {
-  margin: 10px 0;
+  margin: 1vw 0;
 }
 
 section > .details > h5 {
-  font-size: 14px;
+  font-size: calc(0.8rem + 0.1vw);
   font-weight: 400;
-  font-style: italic;
   line-height: 22px;
+}
+
+section > .details > h5 > span {
+  text-decoration: underline;
 }
 
 section > .details > p {
   margin: 5px 0;
-  font-size: 13px;
+  font-size: calc(0.8rem + 0.1vw);
   font-weight: 400;
   line-height: 22px;
 }
@@ -262,14 +265,20 @@ form > * {
   width: 300px;
   margin: 5px 0;
   padding: 10px 15px;
-  color: rgb(14, 108, 149);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
   font-size: 13px;
   border: 1px solid rgb(59, 141, 176);
   background-color: rgb(229, 245, 252);
   border-radius: 5px;
   min-height: 40px;
-  
+}
+
+form > *:focus {
+  outline: none;
+}
+
+form > *::placeholder {
+  color: rgb(57, 171, 220);
 }
 
 form > textarea {
@@ -277,7 +286,33 @@ form > textarea {
   min-height: 160px;
 }
 
-.pageclip-form__submit::after {
+form > .pageclip-form__submit {
+  color: rgb(57, 171, 220);
+}
+
+form > .pageclip-form__submit::after {
   border-color: rgb(59, 141, 176);
   border-left-color: rgb(4, 67, 95);
+}
+
+form > .pageclip-form__submit:hover {
+  cursor: pointer;
+}
+
+/* Responsive design */
+
+@media (max-width: 500px) {
+  .container > div {
+    margin: 2vw;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    border-radius: 2vw;
+  }
+
+  header > .image > img {
+    width: 100px;
+    height: 100px;
+    clip-path: circle(50%);
+  }
 }
