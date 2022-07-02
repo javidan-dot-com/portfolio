@@ -143,8 +143,8 @@ table {
   background-color: rgb(215, 240, 250);
 }
 
-.frame {
-  margin: 80px 0;
+.container > div {
+  margin: 80px 2vw;
   height: fit-content;
   width: 600px;
   background-color: white;
@@ -163,94 +163,121 @@ header {
   grid-template-columns: 30% 70%;
 }
 
-.image {
+header > .image {
   display: grid;
   justify-content: start;
   align-items: center;
 }
 
-img {
+header > .image > img {
   width: 120px;
   height: 120px;
   clip-path: circle(50%);
 }
 
-.info {
+header > .info {
   display: grid;
   grid-template-rows: 50% 50%;
 }
 
-.info-details {
+header > .info > .info-details {
   display: grid;
   align-items: flex-end;
   text-align: center;
 }
 
-.info-details h2 {
+header > .info > .info-details.info-details > h2 {
   letter-spacing: 0.1rem;
 }
 
-#position {
-  color: rgb(59, 141, 176);
+header > .info > .info-details.info-details > p {
+  font-size: 13px;
 }
 
-nav {
+header > .info > nav {
   display: grid;
   align-items: center;
 }
 
-ul {
+nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   font-size: 13px;
+}
+
+nav > ul > li {
   background-color: rgb(229, 245, 252);
-  padding: 5px;
+  padding: 0.8vw;
   border-radius: 2px;
 }
 
-p {
-  font-size: 12px;
-}
-
-section {
-  margin: 20px 0;
-  display: grid;
-}
-
-a:link,
+nav > ul > li > a:link,
 :visited,
 :active {
   text-decoration: none;
   color: black;
 }
-a:hover {
+nav > ul > li > a:hover {
   text-decoration: line-through;
 }
 
-.section-title {
-  font-size: 15px;
-  font-weight: 700;
+section {
+  margin: 30px 0;
+  display: grid;
 }
 
-.details {
+section > h4 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.05rem;
   margin: 10px 0;
 }
 
-.details h5 {
+section > .details {
+  margin: 10px 0;
+}
+
+section > .details > h5 {
   font-size: 14px;
   font-weight: 400;
   font-style: italic;
   line-height: 22px;
 }
 
-.details p {
+section > .details > p {
   margin: 5px 0;
   font-size: 13px;
   font-weight: 400;
   line-height: 22px;
 }
 
-.italic-text {
-  font-style: italic;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > * {
+  width: 300px;
+  margin: 5px 0;
+  padding: 10px 15px;
+  color: rgb(14, 108, 149);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 13px;
+  border: 1px solid rgb(59, 141, 176);
+  background-color: rgb(229, 245, 252);
+  border-radius: 5px;
+  min-height: 40px;
+  
+}
+
+form > textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.pageclip-form__submit::after {
+  border-color: rgb(59, 141, 176);
+  border-left-color: rgb(4, 67, 95);
 }
