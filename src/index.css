@@ -95,6 +95,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -109,17 +110,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -127,6 +132,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -143,16 +149,16 @@ table {
   background-color: rgb(215, 240, 250);
 }
 
-.container > div {
-  margin: 7vw;
+.container>div {
+  margin: 80px 0;
   height: fit-content;
-  width: 600px;
+  width: 700px;
   background-color: white;
-  border-radius: 0.8vw;
+  border-radius: 10px;
   display: grid;
   flex-direction: column;
   justify-content: center;
-  padding: 2vw;
+  padding: 40px;
   font-family: Roboto, sans-serif;
 }
 
@@ -162,63 +168,64 @@ header {
   grid-template-columns: 30% 70%;
 }
 
-header > .image {
+header>.image {
   display: grid;
   justify-content: start;
   align-items: center;
 }
 
-header > .image > img {
+header>.image>img {
   width: 120px;
   height: 120px;
   clip-path: circle(50%);
 }
 
-header > .info {
+header>.info {
   display: grid;
   grid-template-rows: 50% 50%;
 }
 
-header > .info > .info-details {
+header>.info>.info-details {
   display: grid;
   align-items: flex-end;
   text-align: center;
 }
 
-header > .info > .info-details.info-details > h2 {
+header>.info>.info-details.info-details>h2 {
   letter-spacing: 0.1rem;
   font-size: calc(0.9rem + 0.1vw);
 }
 
-header > .info > .info-details.info-details > p {
+header>.info>.info-details.info-details>p {
   font-size: calc(0.7rem + 0.1vw);
 }
 
-header > .info > nav {
+header>.info>nav {
   display: grid;
   align-items: flex-end;
 }
 
-nav > ul {
+nav>ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-nav > ul > li {
+nav>ul>li {
   background-color: rgb(229, 245, 252);
-  padding: 0.8vw;
+  padding: 10px;
   border-radius: 2px;
   font-size: calc(0.7rem + 0.1vw);
 }
 
-nav > ul > li > a:link,
+nav>ul>li>a:link,
 :visited,
 :active {
   text-decoration: none;
   color: black;
 }
-nav > ul > li > a:hover {
+
+nav>ul>li>a:hover {
   text-decoration: line-through;
 }
 
@@ -227,28 +234,28 @@ section {
   display: grid;
 }
 
-section > h4 {
+section>h4 {
   font-size: calc(0.9rem + 0.1vw);
   text-align: center;
   letter-spacing: 0.05rem;
-  margin: 1vw 0;
+  margin: 10px 0;
 }
 
-section > .details {
-  margin: 1vw 0;
+section>.details {
+  margin: 10px 0;
 }
 
-section > .details > h5 {
+section>.details>h5 {
   font-size: calc(0.8rem + 0.1vw);
   font-weight: 400;
   line-height: 22px;
 }
 
-section > .details > h5 > span {
+section>.details>h5>span {
   text-decoration: underline;
 }
 
-section > .details > p {
+section>.details>p {
   margin: 5px 0;
   font-size: calc(0.8rem + 0.1vw);
   font-weight: 400;
@@ -261,7 +268,7 @@ form {
   align-items: center;
 }
 
-form > * {
+form>* {
   width: 300px;
   margin: 5px 0;
   padding: 10px 15px;
@@ -273,44 +280,44 @@ form > * {
   min-height: 40px;
 }
 
-form > *:focus {
+form>*:focus {
   outline: none;
 }
 
-form > *::placeholder {
+form>*::placeholder {
   color: rgb(57, 171, 220);
 }
 
-form > textarea {
+form>textarea {
   resize: vertical;
   min-height: 160px;
 }
 
-form > .pageclip-form__submit {
+form>.pageclip-form__submit {
   color: rgb(57, 171, 220);
 }
 
-form > .pageclip-form__submit::after {
+form>.pageclip-form__submit::after {
   border-color: rgb(59, 141, 176);
   border-left-color: rgb(4, 67, 95);
 }
 
-form > .pageclip-form__submit:hover {
+form>.pageclip-form__submit:hover {
   cursor: pointer;
 }
 
 /* Responsive design */
 
 @media (max-width: 500px) {
-  .container > div {
-    margin: 2vw;
+  .container>div {
+    margin: 20px;
     height: fit-content;
     width: fit-content;
     background-color: white;
     border-radius: 2vw;
   }
 
-  header > .image > img {
+  header>.image>img {
     width: 100px;
     height: 100px;
     clip-path: circle(50%);
